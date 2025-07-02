@@ -54,6 +54,7 @@ CASSANDRA_PASSWORD=your_password  # Optional
 ## 2: Continuous Incremental Replication
 
 #Purpose
+
 Periodically polls PostgreSQL for changes
 
 Replicates new data to Cassandra
@@ -69,9 +70,13 @@ Basic error handling and logging
 Configuration
 bash
 # CDC Settings
+
 CDC_CHECK_INTERVAL=30  # Seconds between syncs
+
 CDC_LOOKBACK=300  # Seconds to look back on initial run
+
 ##How to Run
+
 Install dependencies:
 
 bash
@@ -80,7 +85,9 @@ Run the pipeline:
 
 python
 python cdc_pipeline.py
+
 ##Monitoring
+
 The pipeline logs these events:
 
 1.Connection successes/failures
